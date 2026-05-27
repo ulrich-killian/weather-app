@@ -1,11 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Accute Weather Sidebar</title>
 </head>
 <body>
+
+  <div class="app-wrapper">
     
+    <!-- Sidebar Start -->
+    <nav class="sidebar close">
+        <i class="fa fa-bars toggle" aria-hidden="true"></i>
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="img/modern-sun-logo-simple-bright-vector-27594672.jpeg" alt="logo" />
+          </span>
+          <div class="text header-text">
+            <span class="name">Accute<span class="trademark">™</span></span>
+            <span class="profession">Weather</span>
+          </div>
+        </div>
+        <!-- Toggle button inside header -->
+       
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-link">
+            <li class="nav-link">
+              <a href="#">
+                <i class="fa-solid fa-map-location-dot icon"></i>
+                <span class="text nav-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="map.html">
+                <i class="fa-solid fa-temperature-low icon"></i>
+                <span class="text nav-text searchHistoryContainer">Analytics</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="fa fa-bell icon" aria-hidden="true"></i>
+                <span class="text nav-text">Notifications</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="fa-solid fa-gear icon"></i>
+                <span class="text nav-text">Settings</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="#">
+                <i class="fa-solid fa-newspaper icon"></i>
+                <span class="text nav-text">News</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bottom-content">
+          <ul>
+            <li class="nav-link">
+              <a href="#">
+                <i class="fa-solid fa-right-from-bracket icon"></i>
+                <span class="text nav-text">Logout</span>
+              </a>
+            </li>
+
+            <li class="mode">
+              <div class="moon-sun">
+                <i class="fa fa-moon icon moon" aria-hidden="true"></i>
+                <i class="fa fa-sun icon sun" aria-hidden="true"></i>
+              </div>
+              <span class="mode-text text">Dark Mode</span>
+              <div class="toggle-switch">
+                <span class="switch"></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Sidebar End -->
+
+    <!-- Main Content Start -->
+    <div class="main-content">
+      <div class="container">
+        <h1>⛅ Advanced Weather App</h1>
+        <form id="searchForm">
+          <input type="text" id="cityInput" placeholder="Enter city name" required />
+          <button type="submit">Search</button>
+        </form>
+
+        <div class="toggle-container">
+          <label>
+            <input type="checkbox" id="unitToggle" />
+            Show temperature in Fahrenheit
+          </label>
+          
+          <div id="searchHistoryContainer"></div>
+          <div id="searchHistoryContainer"></div>
+<button id="clearHistoryBtn">Clear Search History</button>
+
+        </div>
+       
+        <div class="weather-current" id="weatherCurrent"></div>
+        <div class="forecast" id="forecast"></div>
+        <div class="error" id="error"></div>
+      </div>
+    </div>
+  </div>
+ <!-- Main Content End -->
+
+  <script src="main.js"></script>
 </body>
 </html>
